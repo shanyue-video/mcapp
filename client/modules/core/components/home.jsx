@@ -1,20 +1,54 @@
 import React from 'react';
 
-const Home = () => (
-  <div>
-    <h1>Mantra</h1>
-    <p>
-      Welcome to Mantra 0.2.0.
-    </p>
-    <ul>
-      <li>
-        Read <a target="_blank" href="https://kadirahq.github.io/mantra/">spec</a>
-      </li>
-      <li>
-        Learn <a target="_blank" href="https://github.com/sungwoncho/mantra-cli#commands">CLI</a>
-      </li>
-    </ul>
-  </div>
-);
+import AppBar from 'material-ui/AppBar';
+import IconMenu from 'material-ui/IconMenu';
+import MenuItem from 'material-ui/MenuItem';
+import IconButton from 'material-ui/IconButton/IconButton';
+import MoreVertIcon from 'material-ui/svg-icons/navigation/more-vert';
+
+import baseTheme from 'material-ui/styles/baseThemes/lightBaseTheme';
+import getMuiTheme from 'material-ui/styles/getMuiTheme';
+
+
+class Home extends React.Component {
+
+    getChildContext() {
+        return { muiTheme: getMuiTheme(baseTheme) };
+    }
+
+    render() {
+        const style = {
+            position: "fixed",
+            top: 0,
+            left: 0,
+        };
+        return (
+            <div>
+                <AppBar
+                    title="应用ABcde"
+                    style={style}
+                    iconElementRight={
+                        <IconMenu className="test"
+                            iconButtonElement={<IconButton><MoreVertIcon /></IconButton>}
+                            anchorOrigin={{horizontal: 'left', vertical: 'top'}}
+                            targetOrigin={{horizontal: 'left', vertical: 'top'}}
+                        >
+                            <MenuItem value="1" primaryText="Refresh" />
+                            <MenuItem value="2" primaryText="Send feedback" />
+                            <MenuItem value="3" primaryText="Settings" />
+                            <MenuItem value="4" primaryText="Help" />
+                            <MenuItem value="5" primaryText="Sign out" />
+                        </IconMenu>
+                    }
+                    />
+            </div>
+        );
+    }
+
+}
+
+Home.childContextTypes = {
+    muiTheme: React.PropTypes.object.isRequired,
+};
 
 export default Home;
