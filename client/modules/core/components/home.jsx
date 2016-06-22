@@ -23,8 +23,6 @@ class Home extends React.Component {
             left: 0,
         };
 
-        const {user} = this.props;
-
         const LoginMenuItems = (
             <div>
             <MenuItem value="1" primaryText="Refresh" />
@@ -37,7 +35,7 @@ class Home extends React.Component {
 
         const UnloginMenuItems = (
             <div>
-                <MenuItem value="0" primaryText="Login" />
+                <MenuItem value="0" primaryText="Login" onTouchTap={this.props.login} />
             </div>
         );
 
@@ -52,7 +50,7 @@ class Home extends React.Component {
                             anchorOrigin={{horizontal: 'left', vertical: 'top'}}
                             targetOrigin={{horizontal: 'left', vertical: 'top'}}
                         >
-                            {user ? LoginMenuItems : UnloginMenuItems}
+                            {this.props.user ? LoginMenuItems : UnloginMenuItems}
                         </IconMenu>
                     }
                     />
