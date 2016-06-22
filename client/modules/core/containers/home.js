@@ -25,6 +25,7 @@ export const composer = ({context}, onData) => {
 
 const depsMapper = (context, actions) => ({
     login: actions.home.login,
+    logout: actions.home.logout,
     context: () => context
 });
 

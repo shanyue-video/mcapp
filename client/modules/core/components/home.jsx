@@ -29,7 +29,7 @@ class Home extends React.Component {
             <MenuItem value="2" primaryText="Send feedback" />
             <MenuItem value="3" primaryText="Settings" />
             <MenuItem value="4" primaryText="Help" />
-            <MenuItem value="5" primaryText="Sign out" />
+            <MenuItem value="5" primaryText="Sign out" onTouchTap={this.props.logout} />
             </div>
         );
 
