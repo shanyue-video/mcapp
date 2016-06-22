@@ -22,6 +22,25 @@ class Home extends React.Component {
             top: 0,
             left: 0,
         };
+
+        const {user} = this.props;
+
+        const LoginMenuItems = (
+            <div>
+            <MenuItem value="1" primaryText="Refresh" />
+            <MenuItem value="2" primaryText="Send feedback" />
+            <MenuItem value="3" primaryText="Settings" />
+            <MenuItem value="4" primaryText="Help" />
+            <MenuItem value="5" primaryText="Sign out" />
+            </div>
+        );
+
+        const UnloginMenuItems = (
+            <div>
+                <MenuItem value="0" primaryText="Login" />
+            </div>
+        );
+
         return (
             <div>
                 <AppBar
@@ -33,11 +52,7 @@ class Home extends React.Component {
                             anchorOrigin={{horizontal: 'left', vertical: 'top'}}
                             targetOrigin={{horizontal: 'left', vertical: 'top'}}
                         >
-                            <MenuItem value="1" primaryText="Refresh" />
-                            <MenuItem value="2" primaryText="Send feedback" />
-                            <MenuItem value="3" primaryText="Settings" />
-                            <MenuItem value="4" primaryText="Help" />
-                            <MenuItem value="5" primaryText="Sign out" />
+                            {user ? LoginMenuItems : UnloginMenuItems}
                         </IconMenu>
                     }
                     />

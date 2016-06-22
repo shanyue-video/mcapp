@@ -1,20 +1,24 @@
 import Home from '../components/home';
 import {useDeps, composeWithTracker, composeAll} from 'mantra-core';
 
-export const composer = ({context, userId}, onData) => {
+export const composer = ({context}, onData) => {
     const {Meteor, Collections, LocalState} = context();
 
     const isLogin = LocalState.get('user');
     console.log('isLogin');
     console.log(isLogin);
 
-    if (Meteor.subscribe('user', userId).ready()) {
-        const user = Collections.User.findOne(userId);
+    const user = Meteor.user();
+
+    const userId = 'test';
+
+    if (Meteor.subscribe('user_log', userId).ready()) {
+        Collections.UserLog.insert({'test': userId});
         onData(null, {user});
     } else {
-        const post = Collections.User.findOne(userId);
-        if (post) {
-            onData(null, {post});
+        Collections.UserLog.insert({'test': userId});
+        if (user) {
+            onData(null, {user});
         } else {
             onData();
         }

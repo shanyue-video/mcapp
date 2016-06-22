@@ -1,11 +1,11 @@
-import {User} from '../../lib/collections';
+import {UserLog} from '../../lib/collections';
 import {Meteor} from 'meteor/meteor';
 import {check} from 'meteor/check';
 
 export default function () {
-    Meteor.publish('user', function (userId) {
+    Meteor.publish('user_log', function (userId) {
         check(userId, String);
         const selector = {_id: userId};
-        return User.find(selector);
+        return UserLog.find(selector);
     });
 }
