@@ -4,11 +4,9 @@ import {useDeps, composeWithTracker, composeAll} from 'mantra-core';
 export const composer = ({context}, onData) => {
     const {Meteor, Collections, LocalState} = context();
 
-    const isLogin = LocalState.get('user');
-    console.log('isLogin');
-    console.log(isLogin);
-
     const user = Meteor.user();
+    console.log('isLogin' + LocalState.get('is'));
+    console.log(user);
 
     const userId = 'test';
 
