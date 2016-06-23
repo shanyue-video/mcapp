@@ -49,7 +49,7 @@ class Home extends React.Component {
                     title="应用ABcde"
                     style={style}
                     iconElementRight={
-                        <IconMenu style={{backgroundColor: blue400}}
+                        <IconMenu
                             iconButtonElement={<IconButton><MoreVertIcon /></IconButton>}
                             anchorOrigin={{horizontal: 'left', vertical: 'top'}}
                             targetOrigin={{horizontal: 'left', vertical: 'top'}}
