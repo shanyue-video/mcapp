@@ -8,11 +8,13 @@ import MoreVertIcon from 'material-ui/svg-icons/navigation/more-vert';
 
 import baseTheme from 'material-ui/styles/baseThemes/lightBaseTheme';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
+import {blue400} from 'material-ui/styles/colors';
 
 
 class Home extends React.Component {
 
     getChildContext() {
+        baseTheme.palette.primary1Color = blue400;
         return { muiTheme: getMuiTheme(baseTheme) };
     }
 
@@ -21,6 +23,8 @@ class Home extends React.Component {
             position: "fixed",
             top: 0,
             left: 0,
+            //color: blue400,
+            //backgroundColor: blue400,
         };
 
         const LoginMenuItems = (
@@ -45,7 +49,7 @@ class Home extends React.Component {
                     title="应用ABcde"
                     style={style}
                     iconElementRight={
-                        <IconMenu
+                        <IconMenu style={{backgroundColor: blue400}}
                             iconButtonElement={<IconButton><MoreVertIcon /></IconButton>}
                             anchorOrigin={{horizontal: 'left', vertical: 'top'}}
                             targetOrigin={{horizontal: 'left', vertical: 'top'}}
@@ -53,7 +57,7 @@ class Home extends React.Component {
                             {this.props.user ? LoginMenuItems : UnloginMenuItems}
                         </IconMenu>
                     }
-                    />
+                />
             </div>
         );
     }
