@@ -4,8 +4,6 @@ import AppBar from 'material-ui/AppBar';
 import IconMenu from 'material-ui/IconMenu';
 import MenuItem from 'material-ui/MenuItem';
 import IconButton from 'material-ui/IconButton/IconButton';
-//import MoreVertIcon from 'material-ui/svg-icons/navigation/more-vert';
-//import MoreVertIcon from 'material-ui/svg-icons/action/android';
 import Avatar from 'material-ui/Avatar';
 import List from 'material-ui/List/List';
 import ListItem from 'material-ui/List/ListItem';
@@ -27,8 +25,7 @@ class Home extends React.Component {
             position: "fixed",
             top: 0,
             left: 0,
-            //color: blue400,
-            //backgroundColor: blue400,
+            height: 60,
         };
 
         const LoginMenuItems = (
@@ -54,12 +51,7 @@ class Home extends React.Component {
                     style={style}
                     iconElementLeft={
                         <IconMenu
-                            iconButtonElement={
-                                                //<IconButton>
-                                                    <Avatar src='/resources/icons/icon-29x29.png' size={40}>
-                                                    </Avatar>
-                                                //</IconButton>
-                            }
+                            iconButtonElement={<Avatar src='/resources/icons/icon-29x29.png' size={40} />}
                             anchorOrigin={{horizontal: 'left', vertical: 'top'}}
                             targetOrigin={{horizontal: 'left', vertical: 'top'}}
                         >
