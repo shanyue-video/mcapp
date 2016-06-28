@@ -2,6 +2,7 @@ import React from 'react';
 
 import AppBar from 'material-ui/AppBar';
 import IconMenu from 'material-ui/IconMenu';
+import Menu from 'material-ui/Menu';
 import MenuItem from 'material-ui/MenuItem';
 import FloatingActionButton from 'material-ui/FloatingActionButton';
 import Avatar from 'material-ui/Avatar';
@@ -29,13 +30,7 @@ class Home extends React.Component {
     }
 
     handleToggle() {
-        //let isOpen = false;
-        //if(!this.state)
-        //    isOpen = false;
-        //else
-        //    isOpen = this.state.open;
         this.setState({open: !this.state.open});
-        //this.setState({open: !this.refs.drawerRef.getOpen()});
     }
 
     render() {
@@ -64,9 +59,25 @@ class Home extends React.Component {
 
         return (
             <div>
-                <Drawer ref='drawerRef' open={this.state.open}>
-                    <MenuItem>Menu Item</MenuItem>
-                    <MenuItem>Menu Item 2</MenuItem>
+                <Drawer ref='drawerRef' docked={false} open={this.state.open}
+                        onRequestChange={(open) => this.setState({open})}>
+                    <Menu>
+                        <AppBar
+                            title=""
+                            style={style}
+                            iconElementLeft={
+                                <FloatingActionButton
+                                    mini={true}
+                                    iconStyle={{backgroundImage: 'url(' + '/resources/icons/icon-29x29.png' + ')'}}
+                                    onMouseDown = {this.handleToggle}
+                                />
+                            }
+                        />
+                        <MenuItem primaryText="占位符" />
+                        {this.props.user ? LoginMenuItems : UnloginMenuItems}
+                        <MenuItem primaryText="Paragraph" rightIcon={<b style={style.rightIcon}>¶</b>} />
+                        <MenuItem primaryText="Section" rightIcon={<b style={style.rightIcon}>§</b>} />
+                    </Menu>
                 </Drawer>
                 <AppBar
                     title=""
@@ -79,16 +90,6 @@ class Home extends React.Component {
                         >
                         </FloatingActionButton>
                     }
-                    //iconElementLeft={
-                        //<Avatar src='/resources/icons/icon-29x29.png' size={40} />
-                        //<IconMenu
-                        //    iconButtonElement={<Avatar src='/resources/icons/icon-29x29.png' size={40} />}
-                            //anchorOrigin={{horizontal: 'left', vertical: 'top'}}
-                            //targetOrigin={{horizontal: 'left', vertical: 'top'}}
-                        //>
-                            //{this.props.user ? LoginMenuItems : UnloginMenuItems}
-                        //</IconMenu>
-                    //<!--}-->
                 />
             </div>
         );
@@ -99,10 +100,5 @@ class Home extends React.Component {
 Home.childContextTypes = {
     muiTheme: React.PropTypes.object.isRequired,
 };
-
-//Home.getChildContext = () => {
-//    baseTheme.palette.primary1Color = blue400;
-//    return { muiTheme: getMuiTheme(baseTheme) };
-//};
 
 export default Home;
