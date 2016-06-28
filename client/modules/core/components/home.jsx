@@ -43,17 +43,17 @@ class Home extends React.Component {
 
         const LoginMenuItems = (
             <div>
-            <MenuItem value="1" primaryText="Refresh" />
-            <MenuItem value="2" primaryText="Send feedback" />
-            <MenuItem value="3" primaryText="Settings" />
-            <MenuItem value="4" primaryText="Help" />
-            <MenuItem value="5" primaryText="Sign out" onTouchTap={this.props.logout} />
+            <MenuItem value="1" primaryText="刷新" />
+            <MenuItem value="2" primaryText="反馈" />
+            <MenuItem value="3" primaryText="设置" />
+            <MenuItem value="4" primaryText="帮助" />
+            <MenuItem value="5" primaryText="注销" onTouchTap={this.props.logout} />
             </div>
         );
 
         const UnloginMenuItems = (
             <div>
-                <MenuItem value="0" primaryText="Login" onTouchTap={this.props.login} />
+                <MenuItem value="0" primaryText="登陆" onTouchTap={this.props.login} />
             </div>
         );
 
@@ -75,8 +75,6 @@ class Home extends React.Component {
                         />
                         <MenuItem primaryText="占位符" />
                         {this.props.user ? LoginMenuItems : UnloginMenuItems}
-                        <MenuItem primaryText="Paragraph" rightIcon={<b style={style.rightIcon}>¶</b>} />
-                        <MenuItem primaryText="Section" rightIcon={<b style={style.rightIcon}>§</b>} />
                     </Menu>
                 </Drawer>
                 <AppBar
