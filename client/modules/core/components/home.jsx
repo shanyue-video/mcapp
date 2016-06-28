@@ -4,7 +4,11 @@ import AppBar from 'material-ui/AppBar';
 import IconMenu from 'material-ui/IconMenu';
 import MenuItem from 'material-ui/MenuItem';
 import IconButton from 'material-ui/IconButton/IconButton';
-import MoreVertIcon from 'material-ui/svg-icons/navigation/more-vert';
+//import MoreVertIcon from 'material-ui/svg-icons/navigation/more-vert';
+//import MoreVertIcon from 'material-ui/svg-icons/action/android';
+import Avatar from 'material-ui/Avatar';
+import List from 'material-ui/List/List';
+import ListItem from 'material-ui/List/ListItem';
 
 import baseTheme from 'material-ui/styles/baseThemes/lightBaseTheme';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
@@ -46,11 +50,16 @@ class Home extends React.Component {
         return (
             <div>
                 <AppBar
-                    title="应用ABcde"
+                    title=""
                     style={style}
-                    iconElementRight={
+                    iconElementLeft={
                         <IconMenu
-                            iconButtonElement={<IconButton><MoreVertIcon /></IconButton>}
+                            iconButtonElement={
+                                                //<IconButton>
+                                                    <Avatar src='/resources/icons/icon-29x29.png' size={40}>
+                                                    </Avatar>
+                                                //</IconButton>
+                            }
                             anchorOrigin={{horizontal: 'left', vertical: 'top'}}
                             targetOrigin={{horizontal: 'left', vertical: 'top'}}
                         >
