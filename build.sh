@@ -5,5 +5,5 @@ mv ./build/bundle /var/www/mcapp
 rm -rf ./build/
 cp ./ecosystem.json /var/www/mcapp/
 cd /var/www/mcapp
-pm2 delete blog
+pm2 delete mcapp
 pm2 start ecosystem.json
