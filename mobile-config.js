@@ -6,7 +6,7 @@ App.info({
   description: 'A simple test app built with Meteor/Mantra/Material-UI and ios first.',
   author: 'shanyue',
   email: 'chinadengjing@gmail.com',
-  website: 'http://oforever.net',
+  website: 'http://52.10.179.186',
   version: '0.0.1',
 });
 
