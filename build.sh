@@ -1,9 +1,9 @@
 rm -rf ./build && meteor build ./build --directory && cd ./build/bundle/programs/server && npm install
 cd ../../../../
-rm -rf /var/www/blog
-mv ./build/bundle /var/www/blog
+rm -rf /var/www/mcapp
+mv ./build/bundle /var/www/mcapp
 rm -rf ./build/
-cp ./ecosystem.json /var/www/blog/
-cd /var/www/blog
+cp ./ecosystem.json /var/www/mcapp/
+cd /var/www/mcapp
 pm2 delete blog
 pm2 start ecosystem.json
