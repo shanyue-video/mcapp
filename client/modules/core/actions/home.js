@@ -1,7 +1,7 @@
 export default {
     login({Meteor}) {
         console.log("logining...");
-        Meteor.loginWithPassword('dengjing', '123456');
+        Meteor.loginWithPassword('554816284@qq.com', '123456');
     },
     logout() {
         console.log("logouting...");
