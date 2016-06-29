@@ -5,7 +5,7 @@
    */
   apps : [
     {
-      name      : "blog",
+      name      : "mcapp",
       script    : "main.js",
       env: {
         NODE_ENV: "production",
