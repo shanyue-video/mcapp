@@ -69,11 +69,11 @@ class Home extends React.Component {
                                 <FloatingActionButton
                                     mini={true}
                                     iconStyle={{backgroundImage: 'url(' + '/resources/icons/icon-29x29.png' + ')'}}
-                                    onMouseDown = {this.handleToggle}
+                                    onTouchStart = {this.handleToggle}
                                 />
                             }
                         />
-                        <MenuItem primaryText="占位符" />
+                        <MenuItem primaryText="" />
                         {this.props.user ? LoginMenuItems : UnloginMenuItems}
                     </Menu>
                 </Drawer>
