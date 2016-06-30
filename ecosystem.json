@@ -13,7 +13,7 @@
         //MONGO_OPLOG_URL: "mongodb://local:12345678@oforever.net:27017/local",
 //        MONGO_OPLOG_URL: "mongodb://root:dengjing@oforever.net:27017/local?authSource=admin",
         ROOT_URL: "http://oforever.net",
-        PORT: "3009"
+        PORT: "3000"
       }
     },
   ],
