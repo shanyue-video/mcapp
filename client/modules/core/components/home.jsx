@@ -70,7 +70,7 @@ class Home extends React.Component {
                                 <FloatingActionButton
                                     mini={true}
                                     iconStyle={{backgroundImage: 'url(' + '/resources/icons/icon-29x29.png' + ')'}}
-                                    onMouseDown={this.handleToggle}
+                                    onTouchStart={this.handleToggle}
                                 />
                             }
                         />
@@ -81,11 +81,12 @@ class Home extends React.Component {
                 <AppBar
                     title=""
                     style={style}
+                    onLeftIconButtonTouchTap={this.handleToggle}
                     iconElementLeft={
                         <FloatingActionButton
                             mini={true}
                             iconStyle={{backgroundImage: 'url(' + '/resources/icons/icon-29x29.png' + ')'}}
-                            onMouseDown = {this.handleToggle}
+                            onTouchStart = {this.handleToggle}
                         >
                         </FloatingActionButton>
                     }
