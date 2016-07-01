@@ -65,6 +65,7 @@ class Home extends React.Component {
                         <AppBar
                             title=""
                             style={style}
+                            onLeftIconButtonTouchTap={this.handleToggle}
                             iconElementLeft={
                                 <FloatingActionButton
                                     mini={true}
