@@ -71,6 +71,7 @@ class Home extends React.Component {
                                     mini={true}
                                     iconStyle={{backgroundImage: 'url(' + '/resources/icons/icon-29x29.png' + ')'}}
                                     onTouchStart={this.handleToggle}
+                                    onMouseDown={this.handleToggle}
                                 />
                             }
                         />
@@ -87,8 +88,8 @@ class Home extends React.Component {
                             mini={true}
                             iconStyle={{backgroundImage: 'url(' + '/resources/icons/icon-29x29.png' + ')'}}
                             onTouchStart = {this.handleToggle}
-                        >
-                        </FloatingActionButton>
+                            onMouseDown = {this.handleToggle}
+                        />
                     }
                 />
             </div>
