@@ -32,7 +32,9 @@ class Foot extends React.Component {
             bottom: 0,
             width: "100%",
             left: 0,
-            //height: 60,
+            //height: "80%",
+            //lineHeight: 60,
+            //fontWeight: 100,
         };
 
         var linkInfo = {rel: "stylesheet", href: "https://fonts.googleapis.com/icon?family=Material+Icons"};
@@ -42,19 +44,27 @@ class Foot extends React.Component {
             <div style={style}>
                 <Tabs>
                     <Tab
-                        label="收藏"
-                        icon={<FontIcon className="material-icons">phone</FontIcon>}
-                        />
-                    <Tab
-                        label="喜欢"
-                        icon={<FontIcon className="material-icons">favorite</FontIcon>}
-                        />
-                    <Tab
-                        label="学习"
+                        label={<span style={{fontSize: 12}}>收藏</span>}
                         icon=
                             {<Avatar
                                 src="/resources/icons/icon-29x29.png"
-                                size={30}
+                                size={12}
+                             />}
+                        />
+                    <Tab
+                        label={<span style={{fontSize: 12}}>喜欢</span>}
+                        icon=
+                            {<Avatar
+                                src="/resources/icons/icon-29x29.png"
+                                size={12}
+                             />}
+                        />
+                    <Tab
+                        label={<span style={{fontSize: 12}}>学习</span>}
+                        icon=
+                            {<Avatar
+                                src="/resources/icons/icon-29x29.png"
+                                size={12}
                              />}
                         />
                 </Tabs>
