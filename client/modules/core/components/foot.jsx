@@ -10,6 +10,7 @@ import {Tabs, Tab} from 'material-ui/Tabs';
 import FontIcon from 'material-ui/FontIcon';
 import MapsPersonPin from 'material-ui/svg-icons/maps/person-pin';
 import Avatar from 'material-ui/Avatar';
+import ListItem from 'material-ui/List/ListItem';
 
 
 class Foot extends React.Component {
@@ -47,10 +48,14 @@ class Foot extends React.Component {
                         icon={<FontIcon className="material-icons">favorite</FontIcon>}
                         />
                     <Tab
-                        icon={<Avatar
-                                src="/resources/icons/icon-29x29.png"
-                                size={30}
-                            />}
+                        icon={<ListItem
+                                leftAvatar={<Avatar
+                                            src="/resources/icons/icon-29x29.png"
+                                            size={30}
+                                            />}
+                              >
+                                学习
+                              </ListItem>}
                         />
                 </Tabs>
             </div>
