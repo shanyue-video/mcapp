@@ -27,7 +27,7 @@ class Foot extends React.Component {
             bottom: 0,
             width: "100%",
             left: 0,
-            height: 60,
+            //height: 60,
         };
 
         return (
@@ -35,15 +35,12 @@ class Foot extends React.Component {
                 <Tabs>
                     <Tab
                         icon={<FontIcon className="material-icons">phone</FontIcon>}
-                        label="RECENTS"
                         />
                     <Tab
                         icon={<FontIcon className="material-icons">favorite</FontIcon>}
-                        label="FAVORITES"
                         />
                     <Tab
                         icon={<MapsPersonPin />}
-                        label="NEARBY"
                         />
                 </Tabs>
             </div>
