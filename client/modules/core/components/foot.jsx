@@ -9,12 +9,14 @@ import {blue400} from 'material-ui/styles/colors';
 import {Tabs, Tab} from 'material-ui/Tabs';
 import FontIcon from 'material-ui/FontIcon';
 import MapsPersonPin from 'material-ui/svg-icons/maps/person-pin';
+import Avatar from 'material-ui/Avatar';
 
 
 class Foot extends React.Component {
 
     constructor(props) {
         super(props);
+        this.getChildContext = this.getChildContext.bind(this);
     }
 
     getChildContext() {
@@ -45,7 +47,11 @@ class Foot extends React.Component {
                         icon={<FontIcon className="material-icons">favorite</FontIcon>}
                         />
                     <Tab
-                        icon={<MapsPersonPin />}
+                        icon={<Avatar
+                        src="/resources/icons/icon-29x29.png"
+                        size={30}
+                      />}
+                        //style={{backgroundImage: 'url(' + '/resources/icons/icon-29x29.png' + ')'}}
                         />
                 </Tabs>
             </div>
