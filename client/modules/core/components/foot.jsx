@@ -48,10 +48,9 @@ class Foot extends React.Component {
                         />
                     <Tab
                         icon={<Avatar
-                        src="/resources/icons/icon-29x29.png"
-                        size={30}
-                      />}
-                        //style={{backgroundImage: 'url(' + '/resources/icons/icon-29x29.png' + ')'}}
+                                src="/resources/icons/icon-29x29.png"
+                                size={30}
+                            />}
                         />
                 </Tabs>
             </div>
