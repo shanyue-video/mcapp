@@ -1,5 +1,7 @@
 import React from 'react';
 
+import {DocHead} from 'meteor/kadira:dochead';
+
 import baseTheme from 'material-ui/styles/baseThemes/lightBaseTheme';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import {blue400} from 'material-ui/styles/colors';
@@ -29,6 +31,9 @@ class Foot extends React.Component {
             left: 0,
             //height: 60,
         };
+
+        var linkInfo = {rel: "stylesheet", href: "https://fonts.googleapis.com/icon?family=Material+Icons"};
+        DocHead.addLink(linkInfo);
 
         return (
             <div style={style}>
