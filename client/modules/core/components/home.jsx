@@ -43,11 +43,11 @@ class Home extends React.Component {
 
         const LoginMenuItems = (
             <div>
-            <MenuItem value="1" primaryText="刷新" />
-            <MenuItem value="2" primaryText="反馈" />
-            <MenuItem value="3" primaryText="设置" />
-            <MenuItem value="4" primaryText="帮助" />
-            <MenuItem value="5" primaryText="注销" onTouchTap={this.props.logout} />
+                <MenuItem value="1" primaryText="刷新" />
+                <MenuItem value="2" primaryText="反馈" />
+                <MenuItem value="3" primaryText="设置" />
+                <MenuItem value="4" primaryText="帮助" />
+                <MenuItem value="5" primaryText="注销" onTouchTap={this.props.logout} />
             </div>
         );
 
@@ -74,7 +74,7 @@ class Home extends React.Component {
                                     onMouseDown={this.handleToggle}
                                 />
                             }
-                        />
+                            />
                         <MenuItem primaryText="..." />
                         {this.props.user ? LoginMenuItems : UnloginMenuItems}
                     </Menu>
@@ -91,7 +91,7 @@ class Home extends React.Component {
                             onMouseDown = {this.handleToggle}
                         />
                     }
-                />
+                    />
             </div>
         );
     }
