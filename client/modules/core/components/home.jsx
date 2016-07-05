@@ -40,6 +40,22 @@ class Home extends React.Component {
             height: 60,
         };
 
+        const BaseBar = (
+            <AppBar
+                title=""
+                style={style}
+                onLeftIconButtonTouchTap={this.handleToggle}
+                iconElementLeft={
+                                <FloatingActionButton
+                                    mini={true}
+                                    iconStyle={{backgroundImage: 'url(' + '/resources/icons/icon-29x29.png' + ')'}}
+                                    onTouchStart={this.handleToggle}
+                                    onMouseDown={this.handleToggle}
+                                />
+                                }
+                />
+        );
+
         const LoginMenuItems = (
             <div>
                 <MenuItem value="1" primaryText="刷新" />
@@ -61,36 +77,12 @@ class Home extends React.Component {
                 <Drawer ref='drawerRef' docked={false} open={this.state.open}
                         onRequestChange={(open) => this.setState({open})}>
                     <Menu>
-                        <AppBar
-                            title=""
-                            style={style}
-                            onLeftIconButtonTouchTap={this.handleToggle}
-                            iconElementLeft={
-                                <FloatingActionButton
-                                    mini={true}
-                                    iconStyle={{backgroundImage: 'url(' + '/resources/icons/icon-29x29.png' + ')'}}
-                                    onTouchStart={this.handleToggle}
-                                    onMouseDown={this.handleToggle}
-                                />
-                            }
-                            />
+                        {BaseBar}
                         <MenuItem primaryText="..." />
                         {this.props.user ? LoginMenuItems : UnloginMenuItems}
                     </Menu>
                 </Drawer>
-                <AppBar
-                    title=""
-                    style={style}
-                    onLeftIconButtonTouchTap={this.handleToggle}
-                    iconElementLeft={
-                        <FloatingActionButton
-                            mini={true}
-                            iconStyle={{backgroundImage: 'url(' + '/resources/icons/icon-29x29.png' + ')'}}
-                            onTouchStart = {this.handleToggle}
-                            onMouseDown = {this.handleToggle}
-                        />
-                    }
-                    />
+                {BaseBar}
             </div>
         );
     }
