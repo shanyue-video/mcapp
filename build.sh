@@ -1,3 +1,4 @@
+git pull
 rm -rf ./build && meteor build ./build --directory && cd ./build/bundle/programs/server && npm install
 cd ../../../../
 rm -rf /var/www/mcapp
