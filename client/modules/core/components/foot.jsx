@@ -42,20 +42,20 @@ class Foot extends React.Component {
             <div style={style}>
                 <Tabs>
                     <Tab
+                        label="收藏"
                         icon={<FontIcon className="material-icons">phone</FontIcon>}
                         />
                     <Tab
+                        label="喜欢"
                         icon={<FontIcon className="material-icons">favorite</FontIcon>}
                         />
                     <Tab
-                        icon={<ListItem
-                                leftAvatar={<Avatar
-                                            src="/resources/icons/icon-29x29.png"
-                                            size={30}
-                                            />}
-                              >
-                                学习
-                              </ListItem>}
+                        label="学习"
+                        icon=
+                            {<Avatar
+                                src="/resources/icons/icon-29x29.png"
+                                size={30}
+                             />}
                         />
                 </Tabs>
             </div>
