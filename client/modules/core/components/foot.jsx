@@ -48,8 +48,7 @@ class Foot extends React.Component {
                         icon={<FontIcon className="material-icons">favorite</FontIcon>}
                         />
                     <Tab
-                        icon=
-                            {<Avatar
+                        icon={<Avatar
                                 src="/resources/icons/icon-29x29.png"
                                 size={30}
                              />}
