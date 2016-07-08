@@ -21,6 +21,7 @@ class Content extends React.Component {
     render() {
 
         const style = {
+            //display: 'none',
             position: "fixed",
             top: 60,
         };
