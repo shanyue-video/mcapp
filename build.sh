@@ -1,5 +1,5 @@
 git pull
-rm -rf ./build && meteor build ./build --directory && cd ./build/bundle/programs/server && npm install
+rm -rf ./build && meteor build ./build --directory --server=http://oforever.net:8899 && cd ./build/bundle/programs/server && npm install
 cd ../../../../
 rm -rf /var/www/mcapp
 mv ./build/bundle /var/www/mcapp

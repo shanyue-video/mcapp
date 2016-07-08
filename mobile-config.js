@@ -2,12 +2,12 @@
 /* eslint-disable quote-props */
 
 App.info({
-  name: 'Mcapp3',
+  name: 'Mcapp4',
   description: 'A simple test app built with Meteor/Mantra/Material-UI and ios first.',
   author: 'shanyue',
   email: 'chinadengjing@gmail.com',
-  website: 'http://52.10.179.186',
-  version: '0.0.3',
+  website: 'http://oforever.net',
+  version: '0.0.4',
 });
 
 App.icons({
