@@ -36,6 +36,15 @@ class Foot extends React.Component {
         };
 
         var linkInfo = {rel: "stylesheet", href: "https://fonts.googleapis.com/icon?family=Material+Icons"};
+        /*
+        var linkInfo = {
+            rel: "stylesheet",
+            href: "/webfont/css/materialdesignicons.css",
+            //href: "/webfont/css/materialdesignicons.min.css",
+            //media: "all",
+            //type: "text/css"
+        };
+        */
         DocHead.addLink(linkInfo);
 
         return (
