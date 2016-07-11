@@ -1,20 +1,5 @@
 import React from 'react';
-
 import {DocHead} from 'meteor/kadira:dochead';
-
-//const Layout = ({head, content, foot}) => (
-//  <div>
-//    <div>
-//      {head()}
-//    </div>
-//    <div>
-//      {content()}
-//    </div>
-//    <div>
-//      {foot()}
-//    </div>
-//  </div>
-//);
 
 
 class Layout extends React.Component {
@@ -27,10 +12,6 @@ class Layout extends React.Component {
     componentDidMount() {
         this.width = document.documentElement.clientWidth;
         this.height = document.documentElement.clientHeight;
-    }
-
-    componentWillUnmount() {
-        ;
     }
 
     render() {
