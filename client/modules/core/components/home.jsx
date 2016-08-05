@@ -21,6 +21,12 @@ class Home extends React.Component {
         this.state = {open: false};
         this.getChildContext = this.getChildContext.bind(this);
         this.handleToggle = this.handleToggle.bind(this);
+        this.componentDidMount = this.componentDidMount.bind(this);
+    }
+
+    componentDidMount() {
+        //console.log(navigator.userAgent);
+        this.props.log_log(navigator.userAgent);
     }
 
     getChildContext() {

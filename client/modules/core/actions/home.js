@@ -6,5 +6,9 @@ export default {
     logout() {
         console.log("logouting...");
         Meteor.logout();
+    },
+    log({}, info) {
+        console.log("log log ...");
+        console.log(info);
     }
 }
