@@ -9,6 +9,12 @@ export default {
     },
     log({}, info) {
         console.log("log log ...");
+        Meteor.call('loglog.log', info, (error) => {
+            if(error)
+                console.log(`method loglog error ${error}`);
+            else
+                console.log('success');
+        });
         console.log(info);
     }
 }

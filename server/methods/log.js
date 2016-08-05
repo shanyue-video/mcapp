@@ -1,3 +1,5 @@
+import {LogLog} from '../../lib/collections';
+
 export default function () {
     Meteor.methods({
         'loglog.log'(text) {
