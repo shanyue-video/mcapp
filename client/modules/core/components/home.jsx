@@ -51,13 +51,13 @@ class Home extends React.Component {
                 title=""
                 style={style}
                 iconElementLeft={
-                                <FloatingActionButton
-                                    mini={true}
-                                    iconStyle={{backgroundImage: 'url(' + '/resources/icons/icon-29x29.png' + ')'}}
-                                    onTouchStart={this.handleToggle}
-                                    onMouseDown={this.handleToggle}
-                                />
-                                }
+                    <FloatingActionButton
+                        mini={true}
+                        iconStyle={{backgroundImage: 'url(' + '/resources/icons/icon-29x29.png' + ')'}}
+                        onTouchStart={this.handleToggle}
+                        onMouseDown={this.handleToggle}
+                    />
+                }
                 />
         );
 
