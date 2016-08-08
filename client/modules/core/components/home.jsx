@@ -27,6 +27,10 @@ class Home extends React.Component {
     componentDidMount() {
         //console.log(navigator.userAgent);
         this.props.log_log(navigator.userAgent);
+        //console.log(
+        //    (navigator.userAgent.toString().indexOf('Mozilla') > 0
+        //    || navigator.userAgent.toString().indexOf('Chrome')) > 0
+        //);
     }
 
     getChildContext() {
@@ -46,17 +50,31 @@ class Home extends React.Component {
             height: 60,
         };
 
+        const commonButton = (
+            <FloatingActionButton
+                mini={true}
+                iconStyle={{backgroundImage: 'url(' + '/resources/icons/icon-29x29.png' + ')'}}
+                onTouchStart={this.handleToggle}
+                onMouseDown={this.handleToggle}
+                />
+        );
+
+        const wxButton = (
+            <FloatingActionButton
+                mini={true}
+                iconStyle={{backgroundImage: 'url(' + '/resources/icons/icon-29x29.png' + ')'}}
+                onTouchStart={this.handleToggle}
+                />
+        );
+
         const BaseBar = (
             <AppBar
                 title=""
                 style={style}
                 iconElementLeft={
-                    <FloatingActionButton
-                        mini={true}
-                        iconStyle={{backgroundImage: 'url(' + '/resources/icons/icon-29x29.png' + ')'}}
-                        onTouchStart={this.handleToggle}
-                        onMouseDown={this.handleToggle}
-                    />
+                    (navigator.userAgent.toString().indexOf('Mozilla') > 0
+                     && (navigator.userAgent.toString().indexOf('Chrome')) > 0)
+                     ? wxButton: commonButton
                 }
                 />
         );
