@@ -5,7 +5,7 @@ export const composer = ({context}, onData) => {
     const {Meteor, Collections, LocalState} = context();
 
     const user = Meteor.user();
-    console.log('isLogin' + LocalState.get('is'));
+    console.log('isLogin ' + LocalState.get('is'));
     console.log(user);
 
     const userId = 'test';

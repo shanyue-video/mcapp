@@ -25,12 +25,7 @@ class Home extends React.Component {
     }
 
     componentDidMount() {
-        //console.log(navigator.userAgent);
         this.props.log_log(navigator.userAgent);
-        //console.log(
-        //    (navigator.userAgent.toString().indexOf('Mozilla') > 0
-        //    || navigator.userAgent.toString().indexOf('Chrome')) > 0
-        //);
     }
 
     getChildContext() {

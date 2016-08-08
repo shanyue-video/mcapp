@@ -16,5 +16,7 @@ export default {
                 console.log('success');
         });
         console.log(info);
+        const ct = new Date();
+        console.log(ct.getTime());
     }
 }
