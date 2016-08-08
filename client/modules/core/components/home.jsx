@@ -72,8 +72,8 @@ class Home extends React.Component {
                 title=""
                 style={style}
                 iconElementLeft={
-                    (navigator.userAgent.toString().indexOf('Mozilla') > 0
-                     && (navigator.userAgent.toString().indexOf('Chrome')) > 0)
+                    (navigator.userAgent.toString().indexOf('AppleWebKit') > 0
+                     && (navigator.userAgent.toString().indexOf('Mobile')) > 0)
                      ? wxButton: commonButton
                 }
                 />
