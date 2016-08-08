@@ -5,7 +5,7 @@ import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import {blue400} from 'material-ui/styles/colors';
 
 import {Table, TableBody, TableHeader, TableHeaderColumn, TableRow, TableRowColumn} from 'material-ui/Table';
-
+import Divider from 'material-ui/Divider';
 
 class Content extends React.Component {
 
@@ -59,6 +59,7 @@ class Content extends React.Component {
                         </TableRow>
                     </TableBody>
                 </Table>
+                <Divider />
             </div>
         );
     }
