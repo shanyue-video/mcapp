@@ -11,6 +11,7 @@ class Content extends React.Component {
 
     constructor(props) {
         super(props);
+        this.getChildContext = this.getChildContext.bind(this);
     }
 
     getChildContext() {
